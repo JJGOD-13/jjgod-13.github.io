@@ -2,7 +2,7 @@
 import PostList from "~/components/astro/post-list.astro"
 import { siteData } from "~/config"
 import MainLayout from "~/layouts/main.astro"
-import { getPostsByLocale } from "~/utils"
+import { getPosts } from "~/utils"
 import { getLanguagePaths } from "~/utils/langs"
 
 const pageMeta = siteData.pageMeta
@@ -11,7 +11,7 @@ export function getStaticPaths() {
   return getLanguagePaths()
 }
 
-const posts = await getPostsByLocale()
+const posts = await getPosts()
 
 const postsByYear = posts.reduce(
   (acc: Record<string, any[]>, post: any) => {

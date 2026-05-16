@@ -6,13 +6,13 @@ import { getLangFromUrl } from "~/i18n/utils"
 import MainLayout from "~/layouts/main.astro"
 import "~/styles/post.css"
 import "~/styles/post.scss"
-import { formatDate, getPostsByLocale } from "~/utils"
+import { formatDate, getPosts } from "~/utils"
 
 export async function getStaticPaths() {
   const allPaths = []
 
   for (const lang of langs) {
-    const posts = await getPostsByLocale(lang)
+    const posts = await getPosts()
     const paths = posts.map((post: any) => ({
       params: { lang, slug: post.id },
       props: { post },

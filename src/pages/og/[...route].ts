@@ -1,8 +1,7 @@
 import { OGImageRoute } from "astro-og-canvas"
-import { defaultLanguage } from "~/config"
-import { getPostsByLocale } from "~/utils"
+import { getPosts } from "~/utils"
 
-const posts = await getPostsByLocale(defaultLanguage)
+const posts = await getPosts()
 
 // Transform the collection into an object
 // @ts-ignore

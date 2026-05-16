@@ -2,7 +2,7 @@
 import { NoiseBackground } from "~/components/react/noise-background"
 import { getLangFromUrl } from "~/i18n/utils"
 import { GoogleAnalytics } from "astro-google-analytics"
-import { siteData, zh } from "~/config"
+import { siteData } from "~/config"
 import { ClientRouter } from "astro:transitions"
 
 import "~/styles/tailwind.css"
@@ -15,7 +15,7 @@ const { title, description, ogImage } = Astro.props
 const ogImageURL = new URL(ogImage, Astro.site).href
 const permalink = new URL(Astro.url.pathname, Astro.site).href
 
-const config = lang === "zh" ? zh : siteData
+const config = siteData
 ---
 
 <!doctype html>

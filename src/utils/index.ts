@@ -18,7 +18,7 @@ export const formatDate = (
   return format.replace(/YYYY|MM|DD|HH|mm|ss/g, (match) => tokens[match])
 }
 
-export const getPostsByLocale = async () => {
+export const getPosts = async () => {
   const posts = await getCollection("Posts")
   console.log(posts)
   return posts.sort(
