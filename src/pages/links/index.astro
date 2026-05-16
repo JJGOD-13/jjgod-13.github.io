@@ -7,13 +7,8 @@ import MainLayout from "~/layouts/main.astro"
 const pageMeta = siteData.pageMeta
 ---
 
-<MainLayout
-  title={pageMeta.links.title}
-  description={pageMeta.links.description}
-  ogImage={pageMeta.links.ogImage}
-  needComment={true}
->
-  <h3 class="my-10 text-center text-xl font-bold">
+<MainLayout title={"Links"} description={"Some links "} needComment={true}>
+  <h3 class="">
     {"Some things I like / use"}
   </h3>
 

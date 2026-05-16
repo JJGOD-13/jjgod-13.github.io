@@ -7,8 +7,6 @@ import tailwindcss from "@tailwindcss/vite"
 import expressiveCode from "astro-expressive-code"
 import { defineConfig } from "astro/config"
 
-import robotsTxt from "astro-robots-txt"
-
 // https://astro.build/config
 export default defineConfig({
   output: "static",
@@ -29,6 +27,5 @@ export default defineConfig({
       },
     }),
     mdx(),
-    robotsTxt(),
   ],
 })
