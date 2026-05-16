@@ -23,10 +23,6 @@ export const { getStaticPaths, GET } = OGImageRoute({
         [6, 38, 45],
         [8, 3, 2],
       ],
-      logo: {
-        path: "./public/avatar.png",
-        size: [100],
-      },
       fonts: ["./public/fonts/hwmc.otf"],
     }
   },
