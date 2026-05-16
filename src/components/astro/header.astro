@@ -1,0 +1,31 @@
+---
+import { siteData } from "~/config"
+import { getLangFromUrl } from "~/i18n/utils"
+import Navigation from "~/components/astro/nav.astro"
+
+const lang = getLangFromUrl(Astro.url)
+const config = siteData
+---
+
+<header class="flex h-24 w-full items-center justify-between">
+  <a href="/" aria-label={`${config.siteName}`}>
+    <div class="text-2xl font-semibold">{config.siteName}</div>
+  </a>
+
+  <div class="flex items-center gap-6">
+    <Navigation />
+    {
+      config.social.map((social) => (
+        <a
+          href={social.link}
+          target="_blank"
+          class="hidden md:block"
+          aria-label={social.label}
+          title={social.label}
+        >
+          <social.icon />
+        </a>
+      ))
+    }
+  </div>
+</header>

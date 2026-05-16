@@ -1,0 +1,62 @@
+---
+import { siteData } from "~/config"
+
+const { home, archive, links, about } = siteData.navigation
+---
+
+<div
+  class="flex [scrollbar-width:none] gap-4 overflow-x-auto text-lg whitespace-nowrap [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+>
+  {
+    home && (
+      <a
+        href={`/`}
+        class="hover:underline hover:underline-offset-4"
+        aria-label={"Home"}
+        title={"Home"}
+        data-astro-prefetch="viewport"
+      >
+        <p>{"Home"}</p>
+      </a>
+    )
+  }
+  {
+    archive && (
+      <a
+        href={`/archive`}
+        class="hover:underline hover:underline-offset-4"
+        aria-label={"Archive"}
+        title={"Archive"}
+        data-astro-prefetch="viewport"
+      >
+        <p>{"Archive"}</p>
+      </a>
+    )
+  }
+  {
+    links && (
+      <a
+        href={`/links`}
+        class="hover:underline hover:underline-offset-4"
+        aria-label={"Links"}
+        title={"Links"}
+        data-astro-prefetch="viewport"
+      >
+        <p>{"Links"}</p>
+      </a>
+    )
+  }
+  {
+    about && (
+      <a
+        href={`/about`}
+        class="hover:underline hover:underline-offset-4"
+        aria-label={"About"}
+        title={"About"}
+        data-astro-prefetch="viewport"
+      >
+        <p>{"About"}</p>
+      </a>
+    )
+  }
+</div>
