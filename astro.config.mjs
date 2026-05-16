@@ -12,7 +12,6 @@ export default defineConfig({
   output: "static",
   prefetch: true,
   site: "https://jjgod-13.github.io",
-  base: "/jayant-godse-blog",
   vite: {
     plugins: [tailwindcss()],
   },

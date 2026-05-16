@@ -30,14 +30,6 @@ export const common = {
     about: true,
   },
   latestPosts: 8,
-  comments: {
-    enabled: true,
-    twikoo: {
-      enabled: true,
-      // replace with your own envId
-      envId: import.meta.env.PUBLIC_TWIKOO_ENV_ID ?? "",
-    },
-  },
 }
 
 export const siteData = {
