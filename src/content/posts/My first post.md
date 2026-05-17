@@ -7,7 +7,7 @@ tags: ["Misc"]
 draft: false
 ---
 
-This is my blog something that I've been inspired to do after countless hours of reading other people's slices of the internet and thinking to myself.
+This is my blog, something that I've been inspired to do after countless hours of reading other people's slices of the internet and thinking to myself.
 
 Why can't I have the same thing?
 

@@ -10,7 +10,7 @@ import { defineConfig } from "astro/config"
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  prefetch: true,
+  prefetch: false,
   site: "https://jjgod-13.github.io",
   vite: {
     plugins: [tailwindcss()],
