@@ -7,6 +7,7 @@ const postSchema = z.object({
   pubDate: z.coerce.date(),
   updatedDate: z.coerce.date().optional(),
   tags: z.array(z.string()).optional(),
+  draft: z.boolean(),
 })
 
 export type Post = z.infer<typeof postSchema>

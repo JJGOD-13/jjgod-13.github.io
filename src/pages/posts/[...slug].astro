@@ -34,7 +34,7 @@ const { Content } = await render(post)
 
         <div class="flex flex-row gap-1">
           {
-            post.data.tags.map((tag: string) => (
+            post.data.tags.sort().map((tag: string) => (
               <a
                 href={`/tags/${tag}`}
                 class="my-0! justify-center rounded-xl bg-gray-800 px-2 py-0! align-bottom text-sm/loose no-underline"
