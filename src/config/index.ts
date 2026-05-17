@@ -44,10 +44,5 @@ export const siteData = {
 
     custom: [],
   },
-  pageMeta: {
-    archive: {
-      title: "All Posts",
-      description: "All Posts",
-    },
-  },
+  pageMeta: {},
 }

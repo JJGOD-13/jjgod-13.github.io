@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content"
+import { getCollection, type CollectionEntry } from "astro:content"
 
 export const formatDate = (
   date: Date | string | undefined,
@@ -18,7 +18,7 @@ export const formatDate = (
   return format.replace(/YYYY|MM|DD|HH|mm|ss/g, (match) => tokens[match])
 }
 
-export const getPosts = async () => {
+export async function getPosts(): Promise<CollectionEntry<"Posts">[]> {
   const posts = await getCollection("Posts")
   return posts.sort(
     (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

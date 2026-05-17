@@ -1,10 +1,7 @@
 ---
 import PostList from "~/components/astro/post-list.astro"
-import { siteData } from "~/config"
 import MainLayout from "~/layouts/main.astro"
 import { getPosts } from "~/utils"
-
-const pageMeta = siteData.pageMeta
 
 export function getStaticPaths() {}
 
@@ -25,17 +22,14 @@ const postsByYear = posts.reduce(
 const years = Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a))
 ---
 
-<MainLayout
-  title={pageMeta.archive.title}
-  description={pageMeta.archive.description}
->
+<MainLayout title={"Posts"} description={"Blog posts I've written"}>
   {
     years.map((year) => (
       <div class="year-group my-8">
         <h2 class="my-4 text-2xl font-bold">{year}</h2>
-        {postsByYear[year].map((post: any) => (
-          <PostList post={post} />
-        ))}
+        {postsByYear[year].map((post: any) =>
+          !post.draft ? <PostList post={post} /> : "",
+        )}
       </div>
     ))
   }

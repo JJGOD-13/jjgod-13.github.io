@@ -9,6 +9,8 @@ const postSchema = z.object({
   tags: z.array(z.string()).optional(),
 })
 
+export type Post = z.infer<typeof postSchema>
+
 const PostsCollection = defineCollection({
   loader: glob({ pattern: "**/*.{md,mdx}", base: "src/content/posts/" }),
   schema: postSchema,
