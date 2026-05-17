@@ -1,14 +1,11 @@
 ---
 import { NoiseBackground } from "~/components/react/noise-background"
-import { getLangFromUrl } from "~/i18n/utils"
 import { GoogleAnalytics } from "astro-google-analytics"
 import { siteData } from "~/config"
 import { ClientRouter } from "astro:transitions"
 
 import "~/styles/tailwind.css"
 import "~/styles/view-transition.css"
-
-const lang = getLangFromUrl(Astro.url)
 
 const { title, description, ogImage } = Astro.props
 
@@ -19,7 +16,7 @@ const config = siteData
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />

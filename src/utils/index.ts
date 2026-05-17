@@ -20,7 +20,6 @@ export const formatDate = (
 
 export const getPosts = async () => {
   const posts = await getCollection("Posts")
-  console.log(posts)
   return posts.sort(
     (a: any, b: any) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
   )

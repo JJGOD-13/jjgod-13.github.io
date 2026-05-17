@@ -5,7 +5,7 @@ export const defaultLanguage: string = "en"
 export const common = {
   domain: "https://jjgod-13.github.io",
   meta: {
-    favicon: "/avatar.png",
+    favicon: "/favicon.ico",
     url: "https://jjgod-13.github.io",
   },
   googleAnalyticsId: "",
@@ -50,7 +50,6 @@ export const siteData = {
     archive: {
       title: "All Posts",
       description: "All Posts",
-      ogImage: "/images/page-meta/en/archive.png",
     },
   },
 }

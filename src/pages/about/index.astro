@@ -1,14 +1,8 @@
 ---
-import { siteData } from "~/config"
 import AboutContent from "~/config/about.mdx"
 import MainLayout from "~/layouts/main.astro"
-import { getLanguagePaths } from "~/utils/langs"
 
-export function getStaticPaths() {
-  return getLanguagePaths()
-}
-
-const pageMeta = siteData.pageMeta
+export function getStaticPaths() {}
 ---
 
 <MainLayout

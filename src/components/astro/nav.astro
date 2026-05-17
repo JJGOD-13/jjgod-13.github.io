@@ -1,11 +1,11 @@
 ---
 import { siteData } from "~/config"
 
-const { home, archive, links, about } = siteData.navigation
+const { archive, about } = siteData.navigation
 ---
 
 <div
-  class="flex [scrollbar-width:none] gap-4 overflow-x-auto text-lg whitespace-nowrap [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+  class="flex scrollbar-none gap-4 overflow-x-auto text-lg whitespace-nowrap [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
 >
   {
     archive && (
