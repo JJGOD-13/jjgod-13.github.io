@@ -8,7 +8,6 @@ export const common = {
     favicon: "/favicon.ico",
     url: "https://jjgod-13.github.io",
   },
-  googleAnalyticsId: "",
   social: [
     {
       icon: Github,
@@ -21,12 +20,11 @@ export const common = {
       link: "https://www.linkedin.com/in/jayant-godse/",
     },
   ],
-  rss: true,
   navigation: {
     home: true,
-    archive: true,
+    posts: true,
     custom: [],
-    links: true,
+    links: false,
     about: true,
   },
   latestPosts: 8,

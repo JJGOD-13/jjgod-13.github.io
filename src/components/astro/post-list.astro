@@ -1,22 +1,14 @@
 ---
 interface Props {
   post: any
-  dateFormat?: string
-  dateWidth?: string
 }
 
-const { post, dateFormat = "default", dateWidth = "w-36" } = Astro.props
-import { formatDate } from "~/utils"
+const { post } = Astro.props
 ---
 
 <a
   href={`/posts/${post.id}/`}
   class="my-3 flex visited:text-gray-400/90 md:my-2"
 >
-  <p
-    class={`flex ${dateWidth} flex-shrink-0 truncate text-gray-500 dark:text-gray-400`}
-  >
-    <time>{formatDate(post.data.pubDate, dateFormat)}</time>
-  </p>
   <p class="line-clamp-2 text-lg hover:underline">{post.data.title}</p>
 </a>

@@ -7,9 +7,5 @@ const allPosts = await getPosts()
 const posts = allPosts.slice(0, common.latestPosts)
 ---
 
-<div class="my-8 text-xl font-medium md:my-8">{"Latest"}</div>
-{
-  posts.map((post: any) => (
-    <PostList post={post} dateFormat="DD-MM-YYYY" dateWidth="w-32" />
-  ))
-}
+<div class="my-8 text-xl font-medium text-gray-300 md:my-8">{"Latest"}</div>
+{posts.map((post: any) => <PostList post={post} />)}

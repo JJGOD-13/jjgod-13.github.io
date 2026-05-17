@@ -1,22 +1,22 @@
 ---
 import { siteData } from "~/config"
 
-const { archive, about } = siteData.navigation
+const { posts, about } = siteData.navigation
 ---
 
 <div
   class="flex scrollbar-none gap-4 overflow-x-auto text-lg whitespace-nowrap [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
 >
   {
-    archive && (
+    posts && (
       <a
-        href={`/archive`}
+        href={`/posts`}
         class="hover:underline hover:underline-offset-4"
-        aria-label={"Archive"}
-        title={"Archive"}
+        aria-label={"Posts"}
+        title={"Posts"}
         data-astro-prefetch="viewport"
       >
-        <p>{"Archive"}</p>
+        <p>{"Posts"}</p>
       </a>
     )
   }
