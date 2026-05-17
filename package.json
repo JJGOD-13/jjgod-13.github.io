@@ -24,7 +24,7 @@
     "astro-expressive-code": "^0.40.1",
     "astro-og-canvas": "^0.7.0",
     "canvaskit-wasm": "^0.40.0",
-    "lefthook": "^1.10.10",
+    "lefthook": "^2.1.6",
     "lucide-react": "^0.525.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
